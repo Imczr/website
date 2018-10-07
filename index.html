@@ -1,7 +1,60 @@
-<html>
-  <head>
-    <body>
-      <h1>从零开始做网站</h1>
-    </body>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>五月的编程小屋</title>
+    <style>
+    *{margin:0;padding:0;}
+    a{text-decoration: none;}
+    
+    ul{list-style: none;}
+        /*header*/
+    .header{width:100vw;background-color:rgb(41, 156, 223);display: flex;}
+    .header a:hover{color: rgb(250, 241, 114);}
+    .logo{font-family: Georgia, 'Times New Roman', Times, serif;font-weight:bold;width: 25vw;}
+    .menu-nav{width: 70vw;}
+     #toggle, #checkbox{display: none;}
+     @media (max-width:920px){
+    .logo{font-size:25px;width:30vw;position: relative;}
+    .menu-nav{font-size: 14px;display: none;width: 100vw;}
+    #toggle{display: block;}  
+    #toggle img{width: 30px;position: absolute;right:30px;} 
+    #checkbox:checked~.menu-nav{display: block;text-align: center; position: absolute;top:25px;background-color:rgb(41, 156, 223); }
+    
+    .menu-nav ul li{width:100vw;float:none;}
+     }
+    .menu-nav ul li{float:left;}
+    .menu-nav ul li:last-child{float: right;}
+    .menu-nav ul li a{padding:10px;display: block;padding:10px 20px;}
+    .menu ul li{float:none;display: none;}
+    .menu-nav a:hover{border-bottom: 3px solid maroon;}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo"><a href=""> 五月的编程小屋</a></h1>
+         <label id="toggle" for="checkbox"><img src="Category.svg" alt=""></label>
+         <input type="checkbox" id="checkbox">
+        <div class="menu-nav">
+       <ul>
+           <li><a href="">HTML</a></li>
+           <li><a href="">CSS</a></li>
+           <li><a href="">javascript</a></li>
+           <li class="menu"><a href="">随手记</a>
+            <ul>
+                <li><a href="">日常</a></li>
+                <li><a href="">小说</a></li>
+            </ul>
+        </li>
+        <li><a href="">与我相关</a></li>
+        <li><a href="">联系我</a></li>
+       </ul>
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
 </html>
